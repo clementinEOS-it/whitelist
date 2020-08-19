@@ -36,7 +36,7 @@ To enable a resource to a specific request from an HTTP source, an array of addr
 
 ```
 
-Per abilitare qualsiasi origine 
+To enable any HTTP client 
 
 ```
     router.post('/', whitelist(), function(req, res, next) {

@@ -4,9 +4,9 @@ PlugIn to configure [CORS Cross-Origin Resource Sharing](https://developer.mozil
 ## Installation
 
 ```
-    npm install --save whitelist
+    npm install --save whitelistcors
 
-    yarn add whitelist
+    yarn add whitelistcors
 ```
 
 ## Use
@@ -14,7 +14,7 @@ PlugIn to configure [CORS Cross-Origin Resource Sharing](https://developer.mozil
 To enable a resource to a specific request from an HTTP source, an array of addresses must be implemented.
 
 ```
-    var whitelist = require('whitelist');
+    var whitelist = require('whitelistcors');
 
     var origins = ['http://localhost', 'http://mysite.com'];
 

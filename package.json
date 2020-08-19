@@ -1,6 +1,6 @@
 {
-  "name": "whitelist",
-  "version": "1.0.0",
+  "name": "whitelistcors",
+  "version": "1.0.1",
   "description": "CORS toolkit",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/clementinEOS-it/whitelist.git"
+    "url": "git+https://github.com/clementinEOS-it/whitelistcors.git"
   },
   "keywords": [
     "cors",
@@ -17,9 +17,9 @@
   "author": "Giuseppe Zileni @gzileni giuseppe.zileni@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/clementinEOS-it/whitelist/issues"
+    "url": "https://github.com/clementinEOS-it/whitelistcors/issues"
   },
-  "homepage": "https://github.com/clementinEOS-it/whitelist#readme",
+  "homepage": "https://github.com/clementinEOS-it/whitelistcors#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",

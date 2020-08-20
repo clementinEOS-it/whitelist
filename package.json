@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/clementinEOS-it/whitelistcors.git"
+    "url": "git+https://github.com/gzileni/whitelistcors.git"
   },
   "keywords": [
     "cors",
@@ -17,9 +17,9 @@
   "author": "Giuseppe Zileni @gzileni giuseppe.zileni@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/clementinEOS-it/whitelistcors/issues"
+    "url": "https://github.com/gzileni/whitelistcors.git/issues"
   },
-  "homepage": "https://github.com/clementinEOS-it/whitelistcors#readme",
+  "homepage": "https://github.com/gzileni/whitelistcors.git#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",

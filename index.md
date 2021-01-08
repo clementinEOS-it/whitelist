@@ -1,37 +1,49 @@
-## Welcome to GitHub Pages
+# WHITELIST
+PlugIn to configure [CORS Cross-Origin Resource Sharing](https://developer.mozilla.org/it/docs/Web/HTTP/CORS)
 
-You can use the [editor on GitHub](https://github.com/gzileni/whitelistcors/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Installation
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+```
+    npm install --save whitelistcors
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+    yarn add whitelistcors
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Use
 
-### Jekyll Themes
+To enable a resource to a specific request from an HTTP source, an array of addresses must be implemented.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/gzileni/whitelistcors/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```
+    var whitelist = require('whitelistcors');
 
-### Support or Contact
+    var origins = ['http://localhost', 'http://mysite.com'];
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+    router.post('/', whitelist(origins), function(req, res, next) {
+
+        var contract = req.app.locals.eos.smartContracts.coronavirus;
+        
+        block.run(contract, 'send', req.body, (err, response) => {
+            if (err) {
+                console.error(response);
+                res.status(500).json(response);
+            } else {
+                console.table(response);
+                res.status(200).json(response);
+            }
+        });
+    
+    });
+
+```
+
+To enable any HTTP client 
+
+```
+    router.post('/', whitelist(), function(req, res, next) {
+
+        ....
+
+    });
+
+```
+

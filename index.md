@@ -20,29 +20,8 @@ To enable a resource to a specific request from an HTTP source, an array of addr
 
     router.post('/', whitelist(origins), function(req, res, next) {
 
-        var contract = req.app.locals.eos.smartContracts.coronavirus;
-        
-        block.run(contract, 'send', req.body, (err, response) => {
-            if (err) {
-                console.error(response);
-                res.status(500).json(response);
-            } else {
-                console.table(response);
-                res.status(200).json(response);
-            }
-        });
+        .......
     
-    });
-
-```
-
-To enable any HTTP client 
-
-```
-    router.post('/', whitelist(), function(req, res, next) {
-
-        ....
-
     });
 
 ```

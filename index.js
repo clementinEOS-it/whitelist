@@ -7,20 +7,21 @@ var all = true;
 var originsList = [];
 
 let isWhiteList = (origin) => {
-  return (_.indexOf(origins, origin) != -1)
+  return (_.indexOf(originsList, origin) != -1)
 };
 
 var config = {
   origin: (origin, callback) => {
 
-    if (all || isWhiteList(originsList)) {
+    if (all || isWhiteList(origin)) {
       callback(null, true)
     } else {
-      callback(new Error('Not allowed by CORS'))
+      callback(new Error('Not allowed by CORS'), false)
     }
   }
 };
 
+// return object cors 
 let corsOrigin = (origins) => {
 
     all = (typeof origins == 'undefined' || _.size(origins) == 0);
